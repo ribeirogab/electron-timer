@@ -1,4 +1,4 @@
-const { BrowserWindow } = require("electron");
+const { BrowserWindow } = require('electron');
 
 function createWindow(width, height, obj) {
   return new BrowserWindow({
@@ -6,9 +6,9 @@ function createWindow(width, height, obj) {
     height,
     ...obj,
     webPreferences: {
-      nodeIntegration: true
-    }
-  })
+      nodeIntegration: true,
+    },
+  });
 }
 
 module.exports = createWindow;

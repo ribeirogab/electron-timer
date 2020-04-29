@@ -6,6 +6,10 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   text-align: center;
+  padding: 0 20px;
+  height: 100vh;
+  color: #333;
+  background-color: #f1f1f1;
 
   img {
     width: 50px;
@@ -23,4 +27,6 @@ export const Container = styled.div`
   p span:hover {
     border-bottom: solid 1px #55f;
   }
-`
+`;
+
+export const A = styled.div``;
