@@ -1,1 +1,1 @@
-# Electron + React -- Timer
+# Electron + React - Timer
