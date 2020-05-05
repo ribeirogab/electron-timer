@@ -1,1 +1,2 @@
 require('./openAboutWindow');
+require('./pausedCourse');

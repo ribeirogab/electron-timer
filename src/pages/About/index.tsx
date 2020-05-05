@@ -7,10 +7,10 @@ import { Container } from './styles';
 const { shell } = window.require('electron');
 const { versions } = window.require('process');
 
-function About() {
+const About: React.FC = () => {
   document.title = 'About';
 
-  function openAuthorGithub() {
+  function openAuthorGithub(): void {
     shell.openExternal('https://github.com/ribeirogab');
   }
 
@@ -20,17 +20,14 @@ function About() {
       <p>O Electron Timer guarda seus tempos de estudos.</p>
       <p>Versão 1.0.0</p>
       <p>
-        Feito por
-        {' '}
-        <span role="presentation" onClick={openAuthorGithub}>Gabriel Ribeiro</span>
+        Feito por{' '}
+        <span role="presentation" onClick={openAuthorGithub}>
+          Gabriel Ribeiro
+        </span>
       </p>
-      <p>
-        Versão do Electron
-        {' '}
-        {versions.electron}
-      </p>
+      <p>Versão do Electron {versions.electron}</p>
     </Container>
   );
-}
+};
 
 export default About;

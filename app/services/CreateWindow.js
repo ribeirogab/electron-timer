@@ -1,6 +1,6 @@
 const { BrowserWindow } = require('electron');
 
-function createWindow(width, height, obj) {
+module.exports = function createWindow(width, height, obj) {
   return new BrowserWindow({
     width,
     height,
@@ -10,5 +10,3 @@ function createWindow(width, height, obj) {
     },
   });
 }
-
-module.exports = createWindow;

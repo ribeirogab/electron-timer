@@ -28,5 +28,3 @@ export const Container = styled.div`
     border-bottom: solid 1px #55f;
   }
 `;
-
-export const A = styled.div``;
