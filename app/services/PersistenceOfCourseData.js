@@ -27,7 +27,7 @@ module.exports = async function PersistenceOfCourseData(courseName, time){
     }
 
 
-    await jsonfile.writeFile(filePath, parsedData);
+    await jsonfile.writeFile(filePath, parsedData, { spaces: 2 });
 
     console.log(`[ data ] > Arquivo "${courseName}.json" criado com sucesso!`);
   } catch (error) {
