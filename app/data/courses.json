@@ -2,16 +2,16 @@
   "amount": 2,
   "courses": [
     {
-      "id": 2,
+      "id": 1,
       "name": "programming-logic",
-      "time": "00:00:08",
-      "updated_at": "Wed May 06 2020 10:06:12 GMT-0300 (Brasilia Standard Time)"
+      "time": "00:00:07",
+      "updated_at": "Wed May 06 2020 16:11:03 GMT-0300 (Brasilia Standard Time)"
     },
     {
       "id": 2,
       "name": "electron",
-      "time": "00:00:05",
-      "updated_at": "Wed May 06 2020 10:06:05 GMT-0300 (Brasilia Standard Time)"
+      "time": "00:00:04",
+      "updated_at": "Wed May 06 2020 16:10:58 GMT-0300 (Brasilia Standard Time)"
     }
   ]
 }
