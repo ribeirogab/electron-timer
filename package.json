@@ -14,6 +14,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.0",
+    "axios": "^0.19.2",
     "electron-is-dev": "^1.2.0",
     "jsonfile-promised": "^0.0.1",
     "moment": "^2.25.3",

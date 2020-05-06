@@ -13,6 +13,7 @@ import {
 } from './styles';
 
 import TimerService from '../../services/TimerService';
+import RetrieveCourseInformation from '../../services/RetrieveCourseInformation';
 
 const { ipcRenderer } = window.require('electron');
 
@@ -43,11 +44,16 @@ const Home: React.FC = () => {
     if (course !== '') setTimerOn(false);
   }
 
-  function changeCourse(selectedCourse: string): void {
-    if (selectedCourse !== '') setError(false);
+  async function changeCourse(selectedCourse: string): Promise<void> {
+    if (selectedCourse !== '') {
+      setError(false);
+      const currentCourse = await RetrieveCourseInformation(selectedCourse);
+      setTimer(currentCourse.time);
+    } else {
+      setTimer('00:00:00');
+    }
     setCourse(selectedCourse);
     setTimerOn(false);
-    setTimer('00:00:00');
   }
 
   useEffect(() => {

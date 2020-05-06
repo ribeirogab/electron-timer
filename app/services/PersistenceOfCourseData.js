@@ -2,9 +2,11 @@ const jsonfile = require('jsonfile-promised');
 const path = require('path');
 const fs = require('fs');
 
+
+
 module.exports = async function PersistenceOfCourseData(courseName, time){
   try {
-    const filePath = path.resolve(__dirname, '..', '..', 'src', 'data', `courses.json`);
+    const filePath = path.resolve(__dirname, '..', 'data', 'courses.json');
     const jsonData = fs.readFileSync(filePath, 'utf-8');
     const parsedData = JSON.parse(jsonData);
     const courseIndex = parsedData.courses.findIndex(parsedCourse => parsedCourse.name === courseName);
@@ -26,12 +28,11 @@ module.exports = async function PersistenceOfCourseData(courseName, time){
       parsedData.amount += 1;
     }
 
-
     await jsonfile.writeFile(filePath, parsedData, { spaces: 2 });
 
-    console.log(`[ data ] > Arquivo "${courseName}.json" criado com sucesso!`);
+    console.log(`[ data ] > Curso "${courseName}" atualizado com sucesso!`);
   } catch (error) {
-    console.log(`[ data ] > Falha na criação do arquivo "${courseName}.json".`);
+    console.log(`[ data ] > Falha na atualização do curso "${courseName}".`);
     console.error(error);
   }
 }

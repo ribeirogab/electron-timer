@@ -5,6 +5,7 @@ require('./ipc');
 const path = require('path');
 const isDev = require('electron-is-dev');
 
+
 app.on('ready', () => {
   const mainWindow = new BrowserWindow({
     width: 900,
